@@ -18,3 +18,7 @@ python -m SimpleHTTPServer 8000
 
 # open your browser and enter http://localhost:8000
 ```
+
+## Credits
+
+Presentation made with ❤️ using [reveal.js](https://github.com/hakimel/reveal.js)
