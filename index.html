@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Ansible</title>
+
+        <meta name="description" content="A talk on Ansible">
+        <meta name="author" content="Evans Murithi">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Ansible</h1>
+                    <p>
+                        <small>Presented by <a href="https://github.com/evansmurthi/">Evans Murithi</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Before Ansible</h2>
+                    <p class="fragment grow">Coding in production</p>
+                    <p class="fragment grow">Physical storage</p>
+                    <p class="fragment grow">Copy and paste</p>
+                    <p class="fragment grow">FTP</p>
+                </section>
+
+                <section>
+                    <h2>Ansible to the rescue</h2>
+                    <p>February 2012 by Michael DeHaan</p>
+                    <p>Fedora, one of their first adopters</p>
+                    <p>Acquired by Red Hat in October 2015</p>
+                </section>
+
+                <section>
+                    <h2>What is Ansible?</h2>
+                    <p>An automation platform</p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Why Ansible?</h2>
+                    </section>
+                    <section>
+                        <h2>Simple</h2>
+                        <p class="fragment grow">Human <strong>readable</strong></p>
+                        <p class="fragment grow">No special coding skills needed</p>
+                        <p class="fragment grow">Tasks executed <strong>sequentially</strong> (predictable)</p>
+                    </section>
+                    <section>
+                        <h2>Powerful</h2>
+                        <p class="fragment grow">Configuration management</p>
+                        <p class="fragment grow">Application deployment</p>
+                        <p class="fragment grow">Workflow orchestration</p>
+                    </section>
+                    <section>
+                        <h2>Agentless</h2>
+                        <p class="fragment grow">Agentless architecture (unlike Puppet and Chef)</p>
+                        <p class="fragment grow"><strong>OpenSSH</strong> and <strong>WinRM</strong> only protocols needed</p>
+                        <p class="fragment grow">Efficient and secure</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>How Ansible works</h2>
+                    </section>
+                    <section>
+                        <h2>Inventories</h2>
+                        <p>List of targets/hosts/servers</p>
+                    </section>
+                    <section>
+                        <h2>Playbooks</h2>
+                        <p>Describe the desired state</p>
+                        <p>Contains plays which contains tasks which call modules</p>
+                    </section>
+                    <section>
+                        <h2>Variables</h2>
+                        <p>Playbooks</p>
+                        <p>Files</p>
+                        <p>Group/Host vars</p>
+                        <p>Command line</p>
+                        <p>Ansible tower</p>
+                    </section>
+                    <section>
+                        <h2>Roles</h2>
+                        <p>Special kind of playbook that are fully self contained</p>
+                        <p>Ansible galaxy</p>
+                    </section>
+                    <section>
+                        <h2>Modules</h2>
+                        <p>They control the things you are automating via parameters</p>
+                    </section>
+                    <section>
+                        <h2>Tasks</h2>
+                        <p>A call to a module</p>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>How to run Ansible</h2>
+                    <p class="fragment grow">Ad hoc</p>
+                    <p class="fragment grow">Playbooks</p>
+                    <p class="fragment grow">Ansible Tower</p>
+                </section>
+
+                <section>
+                    <h2>The anti-pitch</h2>
+                    <p>It's new compared to Puppet and Chef</p>
+                    <p>Slow SSH connections</p>
+                </section>
+
+                <section>
+                    <h2>How Savannah uses Ansible</h2>
+                    <p>Configuration management</p>
+                    <p>Application deployment</p>
+                </section>
+
+                <section>
+                    <h2>Further reading</h2>
+                    <p>https://www.ansible.com/resources</p>
+                </section>
+
+                <section style="text-align: left;">
+                    <h1>THE END</h1>
+                    <p>Thanks for staying tuned 😊</p>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/search/search.js', async: true },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
