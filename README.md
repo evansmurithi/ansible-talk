@@ -12,9 +12,13 @@ git clone git@github.com:evansmurithi/ansible-talk.git
 # cd into ansible-talk dir
 cd ansible-talk
 
-# start a web server
-# if you have python installed
+# start a web server e.g.
+
+# python2
 python -m SimpleHTTPServer 8000
+
+# python3
+python -m http.server 8000
 
 # open your browser and enter http://localhost:8000
 ```
